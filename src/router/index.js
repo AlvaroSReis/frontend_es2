@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import LoginPage from '@/components/LoginPage.vue'
 //import HelloWorld from '@/components/HelloWorld.vue'
 import RegisterPage from '@/components/RegisterPage.vue'
+import RegisterProfessorPage from '@/components/RegisterProfessorPage.vue'
 
 Vue.use(Router)
 
@@ -11,13 +12,18 @@ const routes = [
         path:'/',
         name: 'Login',
         component: LoginPage
-        
     },
     {
         path:'/RegisterPage',
         name: 'RegisterPage',
         component: RegisterPage
+    },
+    {
+        path:'/RegisterProfessorPage',
+        name: 'RegisterProfessorPage',
+        component: RegisterProfessorPage
     }
+
 ]
 
 const router = new Router({ routes })
