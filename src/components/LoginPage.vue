@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app dark color="blue">
-      <v-toolbar-title>ES2 Gerencia de Projetos</v-toolbar-title>
+      <v-toolbar-title>Gerencia de Projetos</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
