@@ -8,7 +8,7 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Application
+            Applications
           </v-list-item-title>
           <v-list-item-subtitle>
             subtext
@@ -28,7 +28,7 @@
           link
         >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon to='/' >{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
@@ -37,6 +37,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <v-card/>
   </v-card>
 </template>
 <script>
