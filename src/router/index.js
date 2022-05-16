@@ -6,6 +6,7 @@ import RegisterPage from '@/components/RegisterPage.vue'
 import RegisterProfessorPage from '@/components/RegisterProfessorPage.vue'
 import CreateGroup from '@/components/CreateGroup.vue'
 import UserPage from '@/components/UserPage.vue'
+import ListStudents from  '@/components/ListStudents.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ const routes = [
         path:'/UserPage',
         name: 'UserPage',
         component: UserPage
+    },
+    {
+        path:'/ListStudents',
+        name: 'ListStudents',
+        component: ListStudents
     }
 
 ]

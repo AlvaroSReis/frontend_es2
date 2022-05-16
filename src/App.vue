@@ -5,7 +5,11 @@
       <v-toolbar-title>Gerencia de Projetos</v-toolbar-title>
       <v-spacer/>
       <v-btn depressed color="info" to='/'>Home</v-btn> 
+      <v-btn depressed color="info" to='/CreateGroup'>Grupos</v-btn> 
+      <v-btn depressed color="info" to='/ListStudents'>ListStudents</v-btn> 
+      <v-btn depressed color="info" to='/'>Home</v-btn> 
       <v-btn color="info" to ='/UserPage'>Teste</v-btn>
+      
     </v-app-bar>
     
     <router-view/>
@@ -16,7 +20,7 @@
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 
