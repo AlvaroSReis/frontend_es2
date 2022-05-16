@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import LoginPage from '@/components/LoginPage.vue'
 //import HelloWorld from '@/components/HelloWorld.vue'
 import RegisterPage from '@/components/RegisterPage.vue'
+import CriarTurmas from '@/components/CriarTurmas.vue'
 import RegisterProfessorPage from '@/components/RegisterProfessorPage.vue'
 import CreateGroup from '@/components/CreateGroup.vue'
 import UserPage from '@/components/UserPage.vue'
@@ -34,6 +35,11 @@ const routes = [
         path:'/UserPage',
         name: 'UserPage',
         component: UserPage
+    },
+    {
+        path:'/CriarTurmas',
+        name: 'CriarTurmas',
+        component: CriarTurmas
     }
 
 ]

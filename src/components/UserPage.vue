@@ -2,7 +2,7 @@
 <div class="container">
   <v-card
     height="100%"
-    width="100%"
+    width="40%"
   >
     <v-navigation-drawer permanent>
       <v-list-item>
@@ -39,30 +39,36 @@
     </v-navigation-drawer>
     <v-card/>
   </v-card>
+  <v-content>
+      <CreateGroup></CreateGroup>
+  </v-content>
 </div>
 </template>
 <script>
 import CreateGroupVue from './CreateGroup.vue'
+import CreateGroup from './CreateGroup.vue'
 
 //import CreateGroupVue from './CreateGroup.vue'
   export default {
     name: "UserPage",
-    data () {
-      return {
-        items: [
-          { title: 'Turmas', icon: 'mdi-google-classroom' },
-          { title: 'Disciplinas', icon: 'mdi-book-edit-outline' },
-          { title: 'Configurações', icon: 'mdi-cog' },
-        ],
-        right: CreateGroupVue,
-      }
+    data() {
+        return {
+            items: [
+                { title: "Turmas", icon: "mdi-google-classroom" },
+                { title: "Disciplinas", icon: "mdi-book-edit-outline" },
+                { title: "Configurações", icon: "mdi-cog" },
+            ],
+            right: CreateGroupVue,
+        };
     },
-  }
+    components: { CreateGroup }
+}
 </script>
 
 <style scoped>
   .container {
     align-self: right;
+    flex-direction: row;
   }
 
 </style>
