@@ -66,6 +66,7 @@
         :disabled="step === 1"
         text
         @click="step--"
+        color ="info"
       >
         Voltar
       </v-btn>
@@ -101,3 +102,11 @@
     },
   }
 </script>
+
+<style scoped>
+
+  .container {
+    padding-top: 10%;
+  }
+
+</style>

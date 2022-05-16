@@ -5,6 +5,7 @@ import LoginPage from '@/components/LoginPage.vue'
 import RegisterPage from '@/components/RegisterPage.vue'
 import RegisterProfessorPage from '@/components/RegisterProfessorPage.vue'
 import CreateGroup from '@/components/CreateGroup.vue'
+import UserPage from '@/components/UserPage.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ const routes = [
         path:'/CreateGroup',
         name: 'CreateGroup',
         component: CreateGroup
+    },
+    {
+        path:'/UserPage',
+        name: 'UserPage',
+        component: UserPage
     }
 
 ]

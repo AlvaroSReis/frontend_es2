@@ -1,6 +1,15 @@
 <template>
   <div id="app">
+    <v-app>
+    <v-app-bar app dark color="info">
+      <v-toolbar-title>Gerencia de Projetos</v-toolbar-title>
+      <v-spacer/>
+      <v-btn depressed color="info" to='/'>Home</v-btn> 
+      <v-btn color="info" to ='/UserPage'>Teste</v-btn>
+    </v-app-bar>
+    
     <router-view/>
+    </v-app>
   </div>
 </template>
 
@@ -21,3 +30,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+

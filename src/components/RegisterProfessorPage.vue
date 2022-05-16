@@ -1,9 +1,5 @@
 <template>
   <v-app>
-    <v-app-bar app dark color="blue">
-      <v-toolbar-title>ES2 Gerencia de Projetos</v-toolbar-title>
-    </v-app-bar>
-
     <v-content>
       <v-card width="500" class="mx-auto mt-9">
         <v-card-title>Cadastro Professor</v-card-title>
