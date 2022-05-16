@@ -8,6 +8,10 @@ import CreateGroup from '@/components/CreateGroup.vue'
 import UserPage from '@/components/UserPage.vue'
 import ListStudents from  '@/components/ListStudents.vue'
 
+// Turmas
+import CriarTurmas from '@/components/TurmaProfessor/CriarTurmas.vue'
+import AdicionarAlunos from '@/components/TurmaProfessor/AdicionarAlunos.vue'
+
 Vue.use(Router)
 
 const routes = [
@@ -37,9 +41,20 @@ const routes = [
         component: UserPage
     },
     {
+
         path:'/ListStudents',
         name: 'ListStudents',
         component: ListStudents
+    },
+    {
+        path:'/Turma/CriarTurmas',
+        name: 'CriarTurmas',
+        component: CriarTurmas
+    },
+    {
+        path:'/Turma/AdicionarAlunos',
+        name: 'AdicionarAlunos',
+        component: AdicionarAlunos
     }
 
 ]
