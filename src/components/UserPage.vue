@@ -8,10 +8,10 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Applications
+            Josefa da Silva Santos
           </v-list-item-title>
           <v-list-item-subtitle>
-            subtext
+            Professor
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -42,16 +42,19 @@
 </div>
 </template>
 <script>
+import CreateGroupVue from './CreateGroup.vue'
+
+//import CreateGroupVue from './CreateGroup.vue'
   export default {
     name: "UserPage",
     data () {
       return {
         items: [
-          { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Photos', icon: 'mdi-image' },
-          { title: 'About', icon: 'mdi-help-box' },
+          { title: 'Turmas', icon: 'mdi-google-classroom' },
+          { title: 'Disciplinas', icon: 'mdi-book-edit-outline' },
+          { title: 'Configurações', icon: 'mdi-cog' },
         ],
-        right: null,
+        right: CreateGroupVue,
       }
     },
   }
