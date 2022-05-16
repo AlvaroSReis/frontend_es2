@@ -6,7 +6,8 @@
       <v-spacer/>
       <v-btn depressed color="info" to='/'>Home</v-btn> 
       <v-btn depressed color="info" to ='/CreateGroup'>Grupos</v-btn>
-      <v-btn depressed color="info" to ='/CriarTurmas'>Turmas</v-btn>
+      <v-btn depressed color="info" to ='/Turma/CriarTurmas'>Criar Turma</v-btn>
+      <v-btn depressed color="info" to ='/Turma/AdicionarAlunos'>Adicionar Alunos</v-btn>
       <v-btn color="info" to ='/UserPage'>Teste</v-btn>
     </v-app-bar>
     

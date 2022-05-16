@@ -3,10 +3,13 @@ import Router from 'vue-router'
 import LoginPage from '@/components/LoginPage.vue'
 //import HelloWorld from '@/components/HelloWorld.vue'
 import RegisterPage from '@/components/RegisterPage.vue'
-import CriarTurmas from '@/components/CriarTurmas.vue'
 import RegisterProfessorPage from '@/components/RegisterProfessorPage.vue'
 import CreateGroup from '@/components/CreateGroup.vue'
 import UserPage from '@/components/UserPage.vue'
+
+// Turmas
+import CriarTurmas from '@/components/TurmaProfessor/CriarTurmas.vue'
+import AdicionarAlunos from '@/components/TurmaProfessor/AdicionarAlunos.vue'
 
 Vue.use(Router)
 
@@ -37,9 +40,14 @@ const routes = [
         component: UserPage
     },
     {
-        path:'/CriarTurmas',
+        path:'/Turma/CriarTurmas',
         name: 'CriarTurmas',
         component: CriarTurmas
+    },
+    {
+        path:'/Turma/AdicionarAlunos',
+        name: 'AdicionarAlunos',
+        component: AdicionarAlunos
     }
 
 ]
