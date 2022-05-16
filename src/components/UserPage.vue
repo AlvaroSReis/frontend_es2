@@ -1,8 +1,8 @@
-  <template>
+<template>
+<div class="container">
   <v-card
-    height="400"
-    width="256"
-    class="mx-auto"
+    height="100%"
+    width="100%"
   >
     <v-navigation-drawer permanent>
       <v-list-item>
@@ -39,6 +39,7 @@
     </v-navigation-drawer>
     <v-card/>
   </v-card>
+</div>
 </template>
 <script>
   export default {
@@ -55,3 +56,10 @@
     },
   }
 </script>
+
+<style scoped>
+  .container {
+    align-self: right;
+  }
+
+</style>
