@@ -1,6 +1,7 @@
-const api = "https://sistemas-gestao-projetos.herokuapp.com"
-//const api = "http://10.0.0.107:3000"
+import axios from "axios";
+
+const api = axios.create({
+    baseURL: "http://10.0.0.107:3000"
+});
 
 export default api;
-
-    //baseURL: "http://10.0.0.107:3000"
