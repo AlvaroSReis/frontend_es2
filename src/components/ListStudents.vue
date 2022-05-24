@@ -12,17 +12,37 @@
       ></v-text-field>
     </v-card-title>
     <v-data-table
-        hide-default-footer
+      hide-default-footer
       :headers="headers"
       :items="Nomes"
-      :search="search"
-    ></v-data-table>
+      :search="search">
+      <template v-slot:item="row">
+          <tr>
+            <td>{{row.item.nome}}</td>
+            <td>{{row.item.matricula}}</td>
+            <td>{{row.item.email}}</td>
+            <td>
+                <v-btn class="mx-2" dark small color="red" @click="onButtonClick(row.item)">
+                    X
+                </v-btn>
+            </td>
+          </tr>
+      </template>
+
+   
+    </v-data-table>
+    
   </v-card>
 </template>
 
 <script>
   export default {
     name: 'ListStudents',
+    methods: {
+        delete(item) {
+            this.items = this.items.filter((d) => d.id !== item.id);
+        },
+    },
     data () {
       return {
         search: '',
@@ -33,34 +53,34 @@
             sortable: false,
             value: 'nome',
           },
-          { text: 'Matricula', value: 'matricula' },
-          { text: 'Email', value: 'email' },
+          { text: 'Matricula', value: 'matricula', width: "1%" },
+          { text: 'Email', value: 'email', width: "1%" },
 
         ],
         Nomes: [
           {
-              nome: 'AAAAAAAA AAAAAAAA',
-              matricula: '1391201381399999',
-              email: '5641641@gmail.com'
+              nome: 'João Brofresto Castanhola Caldo',
+              matricula: '00000000000000',
+              email: 'castantaTeste@gmail.com'
           },
           {
-              nome: 'OOOOOO OOOOOO',
-              matricula: '1391201381399999',
-              email: '5641641@gmail.com'
+              nome: 'Cláudio de Câna',
+              matricula: '13912099999',
+              email: '56161@gmail.com'
           },
           {
-              nome: 'DDDDDDD AAAAAAAA',
-              matricula: '1391201381399999',
+              nome: 'DDDDDDDA AAAAAAAA',
+              matricula: '13912099999',
               email: '5641641@gmail.com'
           },
           {
               nome: 'BBBBBBB BBBBBBB',
-              matricula: '1391201381399999',
+              matricula: '13912099999',
               email: '5641641@gmail.com'
           },
           {
               nome: 'CCCCCCC CCCCCCC',
-              matricula: '1391201381399999',
+              matricula: '13912099999',
               email: '5641641@gmail.com'
           },
         ],

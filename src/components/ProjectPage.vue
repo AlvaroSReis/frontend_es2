@@ -44,6 +44,16 @@
       </v-window-item>
 
       <v-window-item :value="3">
+        <v-card-text>
+           <v-select
+          :items= "projetos"
+          label="Outlined style"
+          outlined
+        ></v-select>
+        </v-card-text>
+      </v-window-item>
+
+      <v-window-item :value="4">
         <div class="pa-4 text-center">
           <v-img
             class="mb-4"
@@ -72,7 +82,7 @@
       </v-btn>
       <v-spacer></v-spacer>
       <v-btn
-        :disabled="step === 3"
+        :disabled="step === 4"
         color="primary"
         depressed
         @click="step++"
@@ -89,6 +99,11 @@
     name: 'CreateGroup',
     data: () => ({
       step: 1,
+        projetos:[ 
+        "projeto 1",
+        "foguete invertido errado", 
+        "carroça do desespero"
+      ]
     }),
 
     computed: {
@@ -96,6 +111,7 @@
         switch (this.step) {
           case 1: return 'Criar grupo'
           case 2: return 'Convidar participantes'
+          case 3: return 'Escolher projeto'
           default: return 'Account created'
         }
       },
