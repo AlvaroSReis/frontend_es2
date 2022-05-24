@@ -38,7 +38,7 @@
             type="password"
           ></v-text-field>
           <span class="text-caption grey--text text--darken-1">
-            Entre com a senha para sua conta
+            Please enter a password for your account
           </span>
         </v-card-text>
       </v-window-item>
