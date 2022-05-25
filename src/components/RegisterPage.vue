@@ -52,9 +52,8 @@ export default {
       try { 
         await this.axios.post(
           api + '/alunos/', this.form
-          ).then((response) => {
-            dispatchEvent(response.status_code, status_code.HTTP_201_CREATED)
-            dispatchEvent(response.data['matricula'], data['matricula'])
+          ).then(() => {
+
           
         this.$router.push({path:'/'})
       }) 

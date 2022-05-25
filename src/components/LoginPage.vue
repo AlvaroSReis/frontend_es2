@@ -49,7 +49,7 @@ export default {
           api + '/login/', this.form
           ).then((response) => {
         this.token = response
-        this.$router.push({path:'/StudentPage'})
+        this.$router.push({path:'/StudentPage/' + response})
       }) 
     } catch (e) {
       console.log(e)
