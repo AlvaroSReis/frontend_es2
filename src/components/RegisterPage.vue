@@ -4,10 +4,11 @@
       <v-card width="500" class="mx-auto mt-9">
         <v-card-title>Cadastro</v-card-title>
         <v-card-text>
-          <v-text-field label="Nome" prepend-icon="mdi-account-circle"/>
-          <v-text-field label="Matricula" prepend-icon="mdi-school"/>
-          <v-text-field label="Email" prepend-icon="mdi-email"/>
+          <v-text-field v-model="form.nome" label="Nome" prepend-icon="mdi-account-circle"/>
+          <v-text-field v-model="form.matricula" label="Matricula" prepend-icon="mdi-school"/>
+          <v-text-field v-model="form.email" label="Email" prepend-icon="mdi-email"/>
           <v-text-field 
+          v-model="form.senha"
           label="Senha" 
           :type="showPassword ? 'text' : 'password'"
           prepend-icon="mdi-lock"
@@ -23,19 +24,43 @@
 
         <v-divider></v-divider>
         <v-card-actions>
-          <v-btn color="info"> Cadastrar </v-btn>
+          <v-btn color="info" @click="onCreatePost()"> Cadastrar </v-btn>
         </v-card-actions>
       </v-card>
     </v-content>
   </v-app>
 </template>
 <script>
+import api from '@/services/api.js';
+
 export default {
     name: 'RegisterPage',
   data()
   {
     return{
-      showPassword:false
+      showPassword:false,
+      form: {
+        nome: '',
+        matricula: '',
+        senha: '',
+        email: '',
+      }
+    }
+  },
+  methods: {
+    async onCreatePost(){
+      try { 
+        await this.axios.post(
+          api + '/alunos/', this.form
+          ).then((response) => {
+            dispatchEvent(response.status_code, status_code.HTTP_201_CREATED)
+            dispatchEvent(response.data['matricula'], data['matricula'])
+          
+        this.$router.push({path:'/'})
+      }) 
+    } catch (e) {
+      console.log(e)
+    }
     }
   }
 }
